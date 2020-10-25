@@ -1,0 +1,23 @@
+
+dependencies {
+  api name: "gdx",
+      group: "com.badlogicgames.gdx", version: gdxVersion
+
+  api name: "kotlin-stdlib",
+      group: "org.jetbrains.kotlin", version: kotlinVersion
+
+  // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+  api name: 'slf4j-api',
+      group: 'org.slf4j', version: slf4jVersion
+
+  // https://mvnrepository.com/artifact/io.github.libktx/ktx-math
+  api name: 'ktx-math',
+      group: 'io.github.libktx', version: ktxVersion
+
+}
+
+compileKotlin {
+  kotlinOptions {
+    freeCompilerArgs = ["-Xinline-classes"]
+  }
+}
